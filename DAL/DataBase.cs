@@ -5,11 +5,11 @@ using System.Text;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
-using JPList.Log;
 
-using JPList.Domain.Models;
+using jPList.Demo.Log;
+using jPList.Demo.Models;
 
-namespace JPList.DAL
+namespace jPList.Demo.DAL
 {
     public class DataBase
     {
@@ -27,7 +27,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("JPList DB Contructor: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("JPList DB Contructor: " + ex.Message + " " + ex.StackTrace);
             }
         }
 
@@ -55,7 +55,7 @@ namespace JPList.DAL
                         //set queary string
                         cmd.CommandText = queryWithUnnamedParameters;
                         cmd.Connection = Conn;
-                        
+
                         foreach (string parameter in parameters)
                         {
                             param = cmd.CreateParameter();
@@ -64,10 +64,10 @@ namespace JPList.DAL
                             cmd.Parameters.Add(param);
 
                             counter++;
-                        }                        
-                        
+                        }
+
                         Conn.Open();
-                        number = Int32.Parse(cmd.ExecuteScalar().ToString());                                               
+                        number = Int32.Parse(cmd.ExecuteScalar().ToString());
                         Conn.Close();
                     }
                 }
@@ -125,7 +125,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("JPList DB ExecuteNonQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("JPList DB ExecuteNonQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return rowsAffectedNum;
@@ -191,7 +191,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("JPList DB Select: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("JPList DB Select: " + ex.Message + " " + ex.StackTrace);
             }
 
             return items;
@@ -217,9 +217,8 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("JPList DB CreateParameter: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("JPList DB CreateParameter: " + ex.Message + " " + ex.StackTrace);
             }
         }
-
     }
 }

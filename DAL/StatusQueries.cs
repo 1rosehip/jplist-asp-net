@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using jPList.Demo.Models;
+using jPList.Demo.Log;
 
-using JPList.Domain.Models;
-using JPList.Log;
-
-namespace JPList.DAL
+namespace jPList.Demo.DAL
 {
+    /// <summary>
+    /// This class creates SQL queries per jPList statuses from client side
+    /// </summary>
     public class StatusQueries
     {
         private StringBuilder FilterQuery = new StringBuilder();
@@ -18,13 +20,13 @@ namespace JPList.DAL
         /// unnamed parameters list
         /// </summary>
         public List<string> Parameters { get; set; }
-        
+
         /// <summary>
         /// status queries
         /// </summary>
         /// <param name="statuses"></param>
         public StatusQueries(List<StatusDTO> statuses)
-        {            
+        {
             try
             {
                 this.Parameters = new List<string>();
@@ -32,36 +34,36 @@ namespace JPList.DAL
 
                 if (statuses != null)
                 {
-                    foreach(StatusDTO status in statuses)
+                    foreach (StatusDTO status in statuses)
                     {
-                        switch(status.action)
+                        switch (status.action)
                         {
                             case "paging":
-                            {
-                                this.PaginationStatus = status;
-                                break;
-                            }
+                                {
+                                    this.PaginationStatus = status;
+                                    break;
+                                }
 
                             case "filter":
-                            {
-                                this.FilterQuery.Append(this.getFilterQuery(status, this.FilterQuery.ToString(), this.Parameters));
-                                break;
-                            }
+                                {
+                                    this.FilterQuery.Append(this.getFilterQuery(status, this.FilterQuery.ToString(), this.Parameters));
+                                    break;
+                                }
 
                             case "sort":
-                            {
-                                this.SortQuery.Append(this.getSortQuery(status, this.Parameters));
-                                break;
-                            }
+                                {
+                                    this.SortQuery.Append(this.getSortQuery(status, this.Parameters));
+                                    break;
+                                }
                         }
 
-                    }  
+                    }
                 }
-                
+
             }
             catch (Exception ex)
             {
-                 Logger.Error("StatusQueries: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("StatusQueries: " + ex.Message + " " + ex.StackTrace);
             }
         }
 
@@ -78,11 +80,11 @@ namespace JPList.DAL
             try
             {
                 //count database items for pagination
-                query = "SELECT count(*) FROM ItemWebsite " + this.FilterQuery.ToString();
+                query = "SELECT count(*) FROM jplist.ItemWebsite " + this.FilterQuery.ToString();
             }
             catch (Exception ex)
             {
-                 Logger.Error("GetCountQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("GetCountQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return query;
@@ -99,7 +101,7 @@ namespace JPList.DAL
 
             try
             {
-                query = "SELECT title, description, image, likes, keyword1, keyword2 FROM ItemWebsite " + this.FilterQuery.ToString() + " " + this.SortQuery.ToString();
+                query = "SELECT title, description, image, likes, keyword1, keyword2 FROM jplist.ItemWebsite " + this.FilterQuery.ToString() + " " + this.SortQuery.ToString();
 
                 if (this.PaginationStatus != null)
                 {
@@ -108,7 +110,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("GetSelectQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("GetSelectQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return query;
@@ -166,7 +168,7 @@ namespace JPList.DAL
             int startIndex, endIndex;
             string order = " order by id ";
             int numberInt;
-            
+
             try
             {
                 if (status != null && status.data != null && Int32.TryParse(status.data.number, out numberInt) && count > numberInt)
@@ -179,35 +181,17 @@ namespace JPList.DAL
                         order = this.SortQuery.ToString();
                     }
 
-                    query.AppendLine(" SELECT * FROM ( SELECT *, ROW_NUMBER() OVER ( " + order + " ) as row FROM ItemWebsite " + this.FilterQuery.ToString() + ") a WHERE row > " + startIndex + " and row <=  " + endIndex);
+                    query.AppendLine(" SELECT * FROM ( SELECT *, ROW_NUMBER() OVER ( " + order + " ) as row FROM jplist.ItemWebsite " + this.FilterQuery.ToString() + ") a WHERE row > " + startIndex + " and row <=  " + endIndex);
                 }
                 else
                 {
                     query.AppendLine(initialQuery);
                 }
 
-                /*
-                if (status != null && status.data != null && count > status.data.number)
-                {
-                    startIndex = status.data.currentPage * status.data.number;
-                    endIndex = startIndex + status.data.number;
-
-                    if (!String.IsNullOrEmpty(this.SortQuery.ToString()))
-                    {
-                        order = this.SortQuery.ToString();
-                    }
-
-                    query.AppendLine(" SELECT * FROM ( SELECT *, ROW_NUMBER() OVER ( " + order + " ) as row FROM ItemWebsite " + this.FilterQuery.ToString() + ") a WHERE row > " + startIndex + " and row <=  " + endIndex);
-                }
-                else
-                {
-                    query.AppendLine(initialQuery);
-                }
-                 * */
             }
             catch (Exception ex)
             {
-                 Logger.Error("getPagingQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("getPagingQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return query.ToString();
@@ -230,20 +214,23 @@ namespace JPList.DAL
                 {
                     switch (status.data.path)
                     {
-                        case ".title":{
-					        query = " order by title ";
-					        break;
-				        }
-				
-				        case ".desc":{
-					        query = " order by description ";
-					        break;
-				        }
-				
-				        case ".like":{
-					        query = " order by likes ";
-					        break;
-				        }
+                        case ".title":
+                            {
+                                query = " order by title ";
+                                break;
+                            }
+
+                        case ".desc":
+                            {
+                                query = " order by description ";
+                                break;
+                            }
+
+                        case ".like":
+                            {
+                                query = " order by likes ";
+                                break;
+                            }
                     }
 
                     if (!String.IsNullOrEmpty(status.data.order))
@@ -259,7 +246,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("getSortQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("getSortQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return query;
@@ -276,7 +263,7 @@ namespace JPList.DAL
         {
             string query = "";
             string filter = "";
-           
+
             try
             {
                 if (status != null && status.data != null && !String.IsNullOrEmpty(status.name))
@@ -369,7 +356,7 @@ namespace JPList.DAL
             }
             catch (Exception ex)
             {
-                 Logger.Error("getFilterQuery: " + ex.Message + " " + ex.StackTrace);
+                Logger.Error("getFilterQuery: " + ex.Message + " " + ex.StackTrace);
             }
 
             return query;

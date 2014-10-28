@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Web;
 
-namespace JPList.Domain.Models
+namespace jPList.Demo.Models
 {
     /// <summary>
     /// additional status data transfer object
     /// </summary>
     public class StatusDataDTO
     {
-
         #region "Common"
 
         /// <summary>
@@ -59,7 +58,7 @@ namespace JPList.Domain.Models
         #endregion
 
         #region "Pagination"
-        
+
         /// <summary>
         /// items number - string value (it could be number or "all")
         /// </summary>
@@ -71,6 +70,5 @@ namespace JPList.Domain.Models
         public int currentPage { get; set; }
 
         #endregion
-
     }
 }

@@ -5,19 +5,14 @@ using System.Diagnostics;
 using System.Text;
 using System.Data.Common;
 
+using jPList.Demo.Models;
+using jPList.Demo.Log;
+using jPList.Demo.DAL;
+
 using Newtonsoft.Json;
 
-using JPList.DAL;
-using JPList.Domain.Models;
-using JPList.Log;
-using System.Reflection;
-using System.IO;
-
-namespace JPList.WEB
+namespace jPList.Demo.WEB
 {
-    /// <summary>
-    /// JPlist Web Handler
-    /// </summary>
     public class JPListHandler : IHttpHandler
     {
         /// <summary>
@@ -35,21 +30,21 @@ namespace JPList.WEB
 
                 foreach (Item item in items)
                 {
-                    html.AppendLine("<div class='list-item box'>");	
-		            html.AppendLine("<div class='img left'>");	
-		            html.AppendLine("	<img src='" + item.Image + "' alt='' title=''/>");	
-		            html.AppendLine("</div>");	
-			
-		            html.AppendLine("<div class='block right'>");
-		            html.AppendLine("	<p class='title'>" + item.Title + "</p>");	
-		            html.AppendLine("	<p class='desc'>" + item.Description + "</p>");	
-		            html.AppendLine("	<p class='like'>" + item.Likes + " Likes</p>");	
-		            html.AppendLine("	<p class='theme'>" + item.Keyword1 + ", " + item.Keyword2 + "</p>");	
-		            html.AppendLine("</div>");	
-		            html.AppendLine("</div>");	
+                    html.AppendLine("<div class='list-item box'>");
+                    html.AppendLine("<div class='img left'>");
+                    html.AppendLine("	<img src='" + item.Image + "' alt='' title=''/>");
+                    html.AppendLine("</div>");
+
+                    html.AppendLine("<div class='block right'>");
+                    html.AppendLine("	<p class='title'>" + item.Title + "</p>");
+                    html.AppendLine("	<p class='desc'>" + item.Description + "</p>");
+                    html.AppendLine("	<p class='like'>" + item.Likes + " Likes</p>");
+                    html.AppendLine("	<p class='theme'>" + item.Keyword1 + ", " + item.Keyword2 + "</p>");
+                    html.AppendLine("</div>");
+                    html.AppendLine("</div>");
                 }
 
-		        html.Append("</div>");	
+                html.Append("</div>");
             }
             catch (Exception ex)
             {
@@ -79,10 +74,10 @@ namespace JPList.WEB
             try
             {
                 items = new List<Item>();
-                
+
                 //get statuses
                 statuses = context.Request.Form.Get("statuses");
-                
+
                 if (!String.IsNullOrEmpty(statuses))
                 {
                     //decode the url
@@ -98,20 +93,20 @@ namespace JPList.WEB
                         db = new DataBase();
 
                         countQuery = statusQueries.GetCountQuery();
-                        
+
                         if (!String.IsNullOrEmpty(countQuery))
                         {
                             count = db.GetNumber(countQuery, statusQueries.Parameters);
                         }
 
                         selectQuery = statusQueries.GetSelectQuery(count);
-                                                
+
                         if (!String.IsNullOrEmpty(selectQuery))
                         {
                             items = db.Select(selectQuery, statusQueries.Parameters);
                         }
                     }
-                 
+
                 }
 
                 //draw html
