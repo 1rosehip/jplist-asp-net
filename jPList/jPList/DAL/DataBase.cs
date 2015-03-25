@@ -23,7 +23,7 @@ namespace jPList.DAL
             {
                 this.FactoryName = "System.Data.SqlClient";
                 this.Factory = DbProviderFactories.GetFactory(this.FactoryName);
-                this.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
+                this.ConnectionString = ConfigurationManager.ConnectionStrings["jPListDemoConnectionString"].ConnectionString;
             }
             catch (Exception ex)
             {

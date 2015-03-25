@@ -1,5 +1,5 @@
-C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPList.dll
-C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPList.pdb
-C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPList.dll
-C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPList.pdb
 C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPList.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPListDemo.dll
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPListDemo.pdb
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPListDemo.dll
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPListDemo.pdb
