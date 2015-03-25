@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E80F2F89-79AF-4F38-B0CE-1A6AD6F1A3DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>jPList</RootNamespace>
+    <AssemblyName>jPList</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json.Net35, Version=4.0.2.0, Culture=neutral, PublicKeyToken=8a3e61b38097e4db, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\jplist.mdf" />
+    <Content Include="App_Data\jplist_log.ldf">
+      <DependentUpon>jplist.mdf</DependentUpon>
+    </Content>
+    <Content Include="content\css\jplist-core.min.css" />
+    <Content Include="content\css\jplist-demo-pages.min.css" />
+    <Content Include="content\css\jplist-filter-toggle-bundle.min.css" />
+    <Content Include="content\css\jplist-history-bundle.min.css" />
+    <Content Include="content\css\jplist-pagination-bundle.min.css" />
+    <Content Include="content\css\jplist-preloader-control.min.css" />
+    <Content Include="content\css\jplist-textbox-control.min.css" />
+    <Content Include="content\css\jplist-views-control.min.css" />
+    <Content Include="content\css\styles.min.css" />
+    <Content Include="content\css\vendor\normalize.css" />
+    <Content Include="content\img\common\ajax-loader-line.gif" />
+    <Content Include="content\img\icons\grid-btn-disabled.png" />
+    <Content Include="content\img\icons\grid-btn.png" />
+    <Content Include="content\img\icons\list-btn-disabled.png" />
+    <Content Include="content\img\icons\list-btn.png" />
+    <Content Include="content\img\icons\thumbs-btn-disabled.png" />
+    <Content Include="content\img\icons\thumbs-btn.png" />
+    <Content Include="content\img\thumbs\arch-1.jpg" />
+    <Content Include="content\img\thumbs\arch-2.jpg" />
+    <Content Include="content\img\thumbs\autumn-1.jpg" />
+    <Content Include="content\img\thumbs\boats-1.jpg" />
+    <Content Include="content\img\thumbs\book-1.jpg" />
+    <Content Include="content\img\thumbs\business-1.jpg" />
+    <Content Include="content\img\thumbs\calendar-1.jpg" />
+    <Content Include="content\img\thumbs\car-1.jpg" />
+    <Content Include="content\img\thumbs\christmas-1.jpg" />
+    <Content Include="content\img\thumbs\christmas-2.jpg" />
+    <Content Include="content\img\thumbs\christmas-3.jpg" />
+    <Content Include="content\img\thumbs\city-1.jpg" />
+    <Content Include="content\img\thumbs\city-2.jpg" />
+    <Content Include="content\img\thumbs\coffee-grass.jpg" />
+    <Content Include="content\img\thumbs\coins.jpg" />
+    <Content Include="content\img\thumbs\crayons.jpg" />
+    <Content Include="content\img\thumbs\cupcakes.jpg" />
+    <Content Include="content\img\thumbs\eggs-nest.jpg" />
+    <Content Include="content\img\thumbs\flower-1.jpg" />
+    <Content Include="content\img\thumbs\flower-2.jpg" />
+    <Content Include="content\img\thumbs\flower-3.jpg" />
+    <Content Include="content\img\thumbs\fountain.jpg" />
+    <Content Include="content\img\thumbs\leaves.jpg" />
+    <Content Include="content\img\thumbs\lichterman.jpg" />
+    <Content Include="content\img\thumbs\pinecone.jpg" />
+    <Content Include="content\img\thumbs\river-1.jpg" />
+    <Content Include="content\img\thumbs\river-2.jpg" />
+    <Content Include="content\img\thumbs\sunset-1.jpg" />
+    <Content Include="content\img\thumbs\tree.jpg" />
+    <Content Include="content\img\thumbs\winter-1.jpg" />
+    <Content Include="content\img\thumbs\winter-2.jpg" />
+    <Content Include="content\img\thumbs\winter-sun.jpg" />
+    <Content Include="content\img\thumbs\woodstump.jpg" />
+    <Content Include="content\js\jplist\jplist-core.min.js" />
+    <Content Include="content\js\jplist\jplist.filter-toggle-bundle.min.js" />
+    <Content Include="content\js\jplist\jplist.history-bundle.min.js" />
+    <Content Include="content\js\jplist\jplist.pagination-bundle.min.js" />
+    <Content Include="content\js\jplist\jplist.preloader-control.min.js" />
+    <Content Include="content\js\jplist\jplist.sort-bundle.min.js" />
+    <Content Include="content\js\jplist\jplist.textbox-control.min.js" />
+    <Content Include="content\js\jplist\jplist.views-control.min.js" />
+    <Content Include="content\js\vendor\jquery-1.10.0.min.js" />
+    <Content Include="content\js\vendor\modernizr.min.js" />
+    <Content Include="default.aspx" />
+    <Content Include="Pages\htmloutput.aspx" />
+    <Content Include="Pages\jsonoutput.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Pages\xmloutput.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DataBase.cs" />
+    <Compile Include="DAL\StatusQueries.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\htmloutput.aspx.cs">
+      <DependentUpon>htmloutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\htmloutput.aspx.designer.cs">
+      <DependentUpon>htmloutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\jsonoutput.aspx.cs">
+      <DependentUpon>jsonoutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\jsonoutput.aspx.designer.cs">
+      <DependentUpon>jsonoutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\StatusDataDTO.cs" />
+    <Compile Include="Models\StatusDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\HTMLOutputHandler.ashx.cs">
+      <DependentUpon>HTMLOutputHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\JSONOutputHandler.ashx.cs">
+      <DependentUpon>JSONOutputHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WEB\XMLOutputHandler.ashx.cs">
+      <DependentUpon>XMLOutputHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\xmloutput.aspx.cs">
+      <DependentUpon>xmloutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\xmloutput.aspx.designer.cs">
+      <DependentUpon>xmloutput.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WEB\HTMLOutputHandler.ashx" />
+    <Content Include="WEB\JSONOutputHandler.ashx" />
+    <Content Include="WEB\XMLOutputHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61966</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

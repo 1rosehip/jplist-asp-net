@@ -9,7 +9,6 @@ This sample project uses ASP.NET and SQL Server database.
 ###Common Features
 - Works with any content (tables, lists, div elements etc...)
 - Works with JavaScript templates like Handlebars, Mustache etc.
-- Works with XML and XSLT templates
 - Grid/list/thumbs view
 - Supports local storage and cookies
 - Has deep links support
@@ -35,6 +34,17 @@ This sample project uses ASP.NET and SQL Server database.
 ###Other Controls
 - Reset button Control
 - Back button Control
+
+##jPList CDN
+jPList CDN is provided by [cdnjs](http://www.cdnjs.com):
+
+```
+<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.1.35/jplist.min.js"></script>
+```
+
+```
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.1.35/jplist.min.css" />
+```
 
 ###Browser Compatibility
 - Internet Explorer 8+
