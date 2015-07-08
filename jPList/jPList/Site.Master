@@ -8,15 +8,16 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- css -->
-        <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/content/css/vendor/normalize.css" />
-		<link rel="stylesheet" href="/content/css/styles.min.css" />
-
-        <!-- jQuery -->		
-        <script src="/content/js/vendor/jquery-1.10.0.min.js"></script>
-
+        <!-- font libs -->
+		<link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+		
+		<!-- demo page styles -->
+		<link href="~/content/css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
+		
+		<!-- jQuery lib -->		
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		
         <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server"></asp:ContentPlaceHolder>
     </head>
 
@@ -58,19 +59,19 @@
 		    </div>
 
             <!-- header -->
-		    <header class="box" id="header">
-			    <div class="box" id="header-box">
+		    <header id="header" class="box">
+			    <div id="header-box" class="box">
 				    <div class="center">			
 					    <div class="box">
 
 						    <!-- logo -->
-						    <div id="logo" class="left">
-							    <a href="/" title="">
-                                    <img src="/content/img/common/rocket.png" alt="jPList - jQuery Data Grid Controls" title="jPList - jQuery Data Grid Controls" />
-                                    jPList - ASP.NET and SQL Server Version
-                                </a>
-						    </div>	
-						
+						    <div class="align-center text-shadow" id="logo">	
+							    <p>
+								    <img title="jPList - jQuery Data Grid Controls" alt="jPList - jQuery Data Grid Controls" src="http://jplist.com/content/img/common/rocket.png" />
+								    <a title="" href="http://jplist.com">ASP.NET and SQL Server Demo</a>
+							    </p>
+                                <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server"></asp:ContentPlaceHolder>
+						    </div>
 
 					    </div>
 				    </div>					

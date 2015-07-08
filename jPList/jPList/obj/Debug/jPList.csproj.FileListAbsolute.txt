@@ -3,3 +3,10 @@ C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\j
 C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPListDemo.pdb
 C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPListDemo.dll
 C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\obj\Debug\jPListDemo.pdb
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-github-asp-net\jPList\jPList\bin\jPListDemo.dll.config
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\bin\jPListDemo.dll.config
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\bin\jPListDemo.dll
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\bin\jPListDemo.pdb
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\obj\Debug\jPList.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\obj\Debug\jPListDemo.dll
+C:\inetpub\wwwroot\codelib\jplist-apps\jplist-products\downloads\asp-net-data-source\jPList\jPList\obj\Debug\jPListDemo.pdb

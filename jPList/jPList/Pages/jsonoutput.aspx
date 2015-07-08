@@ -3,38 +3,37 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadPlaceHolder">
     	
     <!-- jPList Core  -->
-	<script src="/content/js/jplist/jplist-core.min.js"></script>
-	<link href="/content/css/jplist-core.min.css" rel="stylesheet" type="text/css" />
-	<link href="/content/css/jplist-demo-pages.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.core.min.js"></script>
+	<link href="/content/css/jplist.core.min.css" rel="stylesheet" type="text/css" />
 
     <!-- pagination bundle -->
-	<link href="/content/css/jplist-pagination-bundle.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.pagination-bundle.min.js"></script>
+	<link href="/content/css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.pagination-bundle.min.js"></script>
 		
 	<!-- history bundle -->
-	<link href="/content/css/jplist-history-bundle.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.history-bundle.min.js"></script>
+	<link href="/content/css/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.history-bundle.min.js"></script>
 		
 	<!-- textbox control -->
-	<link href="/content/css/jplist-textbox-control.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.textbox-control.min.js"></script>
+	<link href="/content/css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.textbox-filter.min.js"></script>
 		
 	<!-- preloader control -->
-	<link href="/content/css/jplist-preloader-control.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.preloader-control.min.js"></script>
+	<link href="/content/css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.preloader-control.min.js"></script>
 		
 	<!-- views control -->
-	<link href="/content/css/jplist-views-control.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.views-control.min.js"></script>
+	<link href="/content/css/jplist.views-control.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.views-control.min.js"></script>
 		
 	<!-- sort bundle -->
-	<script src="/content/js/jplist/jplist.sort-bundle.min.js"></script>
+	<script src="/content/js/jplist.sort-bundle.min.js"></script>
 		
 	<!-- toggle filter bundle -->
-	<link href="/content/css/jplist-filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
-	<script src="/content/js/jplist/jplist.filter-toggle-bundle.min.js"></script>	
+	<link href="/content/css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+	<script src="/content/js/jplist.filter-toggle-bundle.min.js"></script>	
         
-        <!-- Handlebars Templates Library: http://handlebarsjs.com -->
+    <!-- Handlebars Templates Library: http://handlebarsjs.com -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>	
 
 	<script>
@@ -94,15 +93,14 @@
     </script>	
 </asp:Content>
 
+<asp:Content ID="TitleContent" runat="server" ContentPlaceHolderID="TitlePlaceHolder">
+    <h1 class="h1-30-normal">ASP.NET and SQL Server: JSON output and Handlebars template</h1>
+</asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="BodyPlaceHolder">
 
     <div class="box">
 	<div class="center">
-				
-		<div class="box text-shadow">
-			<h1 class="h1-30-normal left">ASP.NET and SQL Server Demo - JSON output and Handlebars template</h1>
-		</div>
 
 		<div class="box text-shadow">
 
