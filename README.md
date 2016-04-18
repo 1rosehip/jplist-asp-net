@@ -1,7 +1,7 @@
 # ![jPList - jQuery Data Grid Controls - ASP.NET Version](http://jplist.com/content/img/common/rocket-50.png) [jPList - jQuery Data Grid Controls - ASP.NET and SQL Server](http://jplist.com)
 
-**jPList** is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc).
-This sample project uses ASP.NET and SQL Server database. 
+This project is port of [jQuery jPList Plugin](https://github.com/no81no/jplist) to ASP.NET + SQL Server database. 
+**jPList** is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc). Visit project home for more details: [jplist.com](http://jplist.com).
 
 ##Examples
 - [Demo Page](http://jplist.com/datasourcesexamples/asp-net-sql-server-demo)
