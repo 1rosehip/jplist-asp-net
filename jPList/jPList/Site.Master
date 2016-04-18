@@ -13,7 +13,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
 		
 		<!-- demo page styles -->
-		<link href="~/content/css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
 		
 		<!-- jQuery lib -->		
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

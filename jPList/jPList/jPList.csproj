@@ -20,6 +20,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,16 +69,6 @@
     <Content Include="App_Data\jplist_log.ldf">
       <DependentUpon>jplist.mdf</DependentUpon>
     </Content>
-    <Content Include="content\css\jplist-core.min.css" />
-    <Content Include="content\css\jplist-demo-pages.min.css" />
-    <Content Include="content\css\jplist-filter-toggle-bundle.min.css" />
-    <Content Include="content\css\jplist-history-bundle.min.css" />
-    <Content Include="content\css\jplist-pagination-bundle.min.css" />
-    <Content Include="content\css\jplist-preloader-control.min.css" />
-    <Content Include="content\css\jplist-textbox-control.min.css" />
-    <Content Include="content\css\jplist-views-control.min.css" />
-    <Content Include="content\css\styles.min.css" />
-    <Content Include="content\css\vendor\normalize.css" />
     <Content Include="content\img\common\ajax-loader-line.gif" />
     <Content Include="content\img\icons\grid-btn-disabled.png" />
     <Content Include="content\img\icons\grid-btn.png" />
@@ -115,16 +109,6 @@
     <Content Include="content\img\thumbs\winter-2.jpg" />
     <Content Include="content\img\thumbs\winter-sun.jpg" />
     <Content Include="content\img\thumbs\woodstump.jpg" />
-    <Content Include="content\js\jplist\jplist-core.min.js" />
-    <Content Include="content\js\jplist\jplist.filter-toggle-bundle.min.js" />
-    <Content Include="content\js\jplist\jplist.history-bundle.min.js" />
-    <Content Include="content\js\jplist\jplist.pagination-bundle.min.js" />
-    <Content Include="content\js\jplist\jplist.preloader-control.min.js" />
-    <Content Include="content\js\jplist\jplist.sort-bundle.min.js" />
-    <Content Include="content\js\jplist\jplist.textbox-control.min.js" />
-    <Content Include="content\js\jplist\jplist.views-control.min.js" />
-    <Content Include="content\js\vendor\jquery-1.10.0.min.js" />
-    <Content Include="content\js\vendor\modernizr.min.js" />
     <Content Include="default.aspx" />
     <Content Include="Pages\htmloutput.aspx" />
     <Content Include="Pages\jsonoutput.aspx" />

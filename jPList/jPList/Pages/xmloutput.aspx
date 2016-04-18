@@ -3,35 +3,35 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadPlaceHolder">
     	
         <!-- jPList Core  -->
-		<script src="/content/js/jplist.core.min.js"></script>
-		<link href="/content/css/jplist.core.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.core.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.core.min.css" rel="stylesheet" type="text/css" />
 
         <!-- pagination bundle -->
-		<link href="/content/css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.pagination-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.pagination-bundle.min.js"></script>
 		
 		<!-- history bundle -->
-		<link href="/content/css/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.history-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.history-bundle.min.js"></script>
 		
 		<!-- textbox control -->
-		<link href="/content/css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.textbox-filter.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.textbox-filter.min.js"></script>
 		
 		<!-- preloader control -->
-		<link href="/content/css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.preloader-control.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.preloader-control.min.js"></script>
 		
 		<!-- views control -->
-		<link href="/content/css/jplist.views-control.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.views-control.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.list-grid-view.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.list-grid-view.min.js"></script>
 		
 		<!-- sort bundle -->
-		<script src="/content/js/jplist.sort-bundle.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-bundle.min.js"></script>
 		
 		<!-- toggle filter bundle -->
-		<link href="/content/css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
-		<script src="/content/js/jplist.filter-toggle-bundle.min.js"></script>	
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-toggle-bundle.min.js"></script>	
 
 		<script>
 		    $('document').ready(function () {
@@ -249,8 +249,8 @@
 						data-control-action="views"
 						data-default="jplist-list-view">
 									   
-						<button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"></button>
-						<button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"></button>
+						<button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"><i class="fa fa-list"></i></button>
+						<button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"><i class="fa fa-th-large"></i></button>
 					</div>
 									
 					<!-- checkbox filters -->
