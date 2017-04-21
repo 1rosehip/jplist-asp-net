@@ -2,10 +2,10 @@
 
 **jPList** is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc). This project is a port of [jQuery jPList Plugin](https://github.com/no81no/jplist) to ASP.NET + SQL Server database. Visit project home for more details: [jplist.com](http://jplist.com).
 
-##Examples
+## Examples
 - [Demo Page](http://jplist.com/datasourcesexamples/asp-net-sql-server-demo)
 
-##Common Features
+## Common Features
 - Works with any content (tables, lists, div elements etc...)
 - Works with JavaScript templates like Handlebars, Mustache etc.
 - Works with XML and XSLT templates
@@ -17,44 +17,44 @@
 - Annotated source code
 - Solid documentation
 
-###Sorting
+### Sorting
 - Ascending and descending sorting
 - Sort numbers, text, date and time
 - SELECT and UL/LI sort controls
 
-###Pagination
+### Pagination
 - Auto pagination control
 - Google style pagination
 - Items per page control
 
-###Filter and Search
+### Filter and Search
 - Any number of textbox filters
 - Any number of dropdown filters
 
-###Other Controls
+### Other Controls
 - Reset button Control
 - Back button Control
 
-##Browser Compatibility
+## Browser Compatibility
 - Internet Explorer 8+
 - Firefox
 - Chrome
 - Safari
 - Opera
 
-##jQuery Compatibility
+## jQuery Compatibility
 - Works with jQuery from [version 1.7](http://code.jquery.com/jquery-1.7.min.js)
 - Works with jQuery 2.x versions
 
-##License
+## License
 - The MIT License (MIT) http://opensource.org/licenses/MIT
 
-##[Donations](#donation)
+## [Donations](#donation)
 If you find jPList useful, please consider making a donation to support project development. Thank you for your help!
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N54PFNPQ8ZJSU)
 
-##Links
+## Links
 - [Project Home](http://jplist.com)
 - [jPList on Facebook](https://www.facebook.com/jplist)
 - [jPList on Google+](https://plus.google.com/+Jplistjs)
