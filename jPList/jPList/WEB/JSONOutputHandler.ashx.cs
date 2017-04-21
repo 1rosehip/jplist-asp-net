@@ -54,7 +54,7 @@ namespace jPList.WEB
             StatusQueries statusQueries;
             DataBase db;
 
-            string countQuery, selectQuery;
+            string countQuery = "", selectQuery = "";
             int count = 0;
             List<Item> items;
 

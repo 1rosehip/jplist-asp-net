@@ -15,7 +15,7 @@ namespace jPList.DAL
     {
         private StringBuilder FilterQuery = new StringBuilder();
         private StringBuilder SortQuery = new StringBuilder();
-        private StatusDTO PaginationStatus;
+        private List<StatusDTO> PaginationStatuses = new List<StatusDTO>();
 
         /// <summary>
         /// unnamed parameters list
@@ -31,7 +31,6 @@ namespace jPList.DAL
             try
             {
                 this.Parameters = new List<string>();
-                this.PaginationStatus = null;
 
                 if (statuses != null)
                 {
@@ -41,7 +40,7 @@ namespace jPList.DAL
                         {
                             case "paging":
                                 {
-                                    this.PaginationStatus = status;
+                                    this.PaginationStatuses.Add(status);
                                     break;
                                 }
 
@@ -104,9 +103,9 @@ namespace jPList.DAL
             {
                 query = "SELECT title, description, image, likes, keyword1, keyword2 FROM ItemWebsite " + this.FilterQuery.ToString() + " " + this.SortQuery.ToString();
 
-                if (this.PaginationStatus != null)
+                if (this.PaginationStatuses.Count > 0)
                 {
-                    query = this.getPagingQuery(this.PaginationStatus, count, this.Parameters, query);
+                    query = this.getPagingQuery(this.PaginationStatuses, count, this.Parameters, query);
                 }
             }
             catch (Exception ex)
@@ -163,26 +162,46 @@ namespace jPList.DAL
         /// <param name="count">all items number (after the filters were applied)</param>
         /// <param name="parameters">unnamed parameters list</param>
         /// <returns></returns>
-        private string getPagingQuery(StatusDTO status, int count, List<string> parameters, string initialQuery)
+        private string getPagingQuery(List<StatusDTO> statuses, int count, List<string> parameters, string initialQuery)
         {
             StringBuilder query = new StringBuilder();
-            int startIndex, endIndex;
+            int currentPage = 0;
             string order = " order by id ";
-            int numberInt;
+            int number = 0;
+            int numberInt = 0;
 
             try
             {
-                if (status != null && status.data != null && Int32.TryParse(status.data.number, out numberInt) && count > numberInt)
+                if(statuses != null && statuses.Count > 0)
                 {
-                    startIndex = status.data.currentPage * numberInt;
-                    endIndex = startIndex + numberInt;
-
-                    if (!String.IsNullOrEmpty(this.SortQuery.ToString()))
+                    foreach(var status in statuses)
                     {
-                        order = this.SortQuery.ToString();
+                        if (status != null && status.data != null)
+                        {
+                            if(status.data.currentPage > 0)
+                            {
+                                currentPage = status.data.currentPage;
+                            }
+
+                            if(Int32.TryParse(status.data.number, out numberInt) && numberInt > 0)
+                            {
+                                number = numberInt;
+                            }
+                        }
                     }
 
-                    query.AppendLine(" SELECT * FROM ( SELECT *, ROW_NUMBER() OVER ( " + order + " ) as row FROM ItemWebsite " + this.FilterQuery.ToString() + ") a WHERE row > " + startIndex + " and row <=  " + endIndex);
+                    if (count > number)
+                    {
+                        var startIndex = currentPage * number;
+                        var endIndex = startIndex + number;
+
+                        if (!String.IsNullOrEmpty(this.SortQuery.ToString()))
+                        {
+                            order = this.SortQuery.ToString();
+                        }
+
+                        query.AppendLine(" SELECT * FROM ( SELECT *, ROW_NUMBER() OVER ( " + order + " ) as row FROM ItemWebsite " + this.FilterQuery.ToString() + ") a WHERE row > " + startIndex + " and row <=  " + endIndex);
+                    }
                 }
                 else
                 {
